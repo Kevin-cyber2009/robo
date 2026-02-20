@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "source_file": "bo_de_mau.docx",
+    "class": "Lớp 10",
+    "subject": "Tổng Hợp"
+  },
+  "questions": [
+    {
+      "id": "42d91afc-d845-4fbc-86cd-0cb8efaeb746",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Thủ đô của Việt Nam là?",
+      "choices": {
+        "A": "Hà Nội",
+        "B": "Hồ Chí Minh",
+        "C": "Đà Nẵng",
+        "D": "Huế"
+      },
+      "answer": "A",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "ea2b8585-2860-4dc6-a54b-f7cddbc7d0c8",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Số nguyên tố nhỏ nhất lớn hơn 10 là?",
+      "choices": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "15"
+      },
+      "answer": "A",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "cb2d4d53-0406-41b9-a4c9-7e14f9769f0b",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Đơn vị đo nhiệt độ trong hệ SI là?",
+      "choices": {
+        "A": "Celsius",
+        "B": "Fahrenheit",
+        "C": "Kelvin",
+        "D": "Rankine"
+      },
+      "answer": "C",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "dce3effc-6485-47a4-bc83-51bcc832fcb5",
+      "type": "multiple_choice",
+      "difficulty": "easy",
+      "question": "Công thức hóa học của nước là?",
+      "choices": {
+        "A": "CO₂",
+        "B": "H₂O",
+        "C": "NaCl",
+        "D": "O₂"
+      },
+      "answer": "B",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "4d6d4ffd-c7d6-450b-8e9e-6d8380faeeb0",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Định luật II Newton phát biểu rằng?",
+      "choices": {
+        "A": "Mọi vật đứng yên hoặc chuyển động thẳng đều",
+        "B": "F = ma, lực bằng khối lượng nhân gia tốc",
+        "C": "Mọi tác dụng đều có phản tác dụng bằng nhau",
+        "D": "Năng lượng không tự sinh ra hay mất đi"
+      },
+      "answer": "B",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "9d7d10af-b331-4e9d-a9ac-332168dbc09c",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Quá trình quang hợp xảy ra ở bào quan nào trong tế bào thực vật?",
+      "choices": {
+        "A": "Ty thể",
+        "B": "Ribosome",
+        "C": "Lục lạp",
+        "D": "Nhân tế bào"
+      },
+      "answer": "C",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "8eb49a14-70fb-4dc7-b86c-ab6fa004d921",
+      "type": "multiple_choice",
+      "difficulty": "medium",
+      "question": "Trong lập trình, từ khóa nào dùng để khai báo hàm trong Python?",
+      "choices": {
+        "A": "function",
+        "B": "func",
+        "C": "def",
+        "D": "fn"
+      },
+      "answer": "C",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "877f1b27-256e-4b33-a694-9c3ba1297d5c",
+      "type": "short_answer",
+      "difficulty": "easy",
+      "question": "7 × 8 = ?",
+      "choices": {},
+      "answer": "56",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "fb752303-4a10-4036-960d-c9771cf47641",
+      "type": "short_answer",
+      "difficulty": "medium",
+      "question": "Căn bậc hai của 144 là?",
+      "choices": {},
+      "answer": "12",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "20016000-dadc-4d7f-b406-6b38f3d87836",
+      "type": "fact_analysis",
+      "difficulty": "hard",
+      "question": "Xác định đúng/sai cho các nhận định dưới đây:",
+      "choices": {
+        "A": "Nhiệt độ sôi của nước ở áp suất chuẩn là 100°C",
+        "B": "CO₂ là khí giúp thực vật quang hợp",
+        "C": "Mặt trăng tự phát ra ánh sáng",
+        "D": "Ozone bảo vệ Trái đất khỏi tia UV"
+      },
+      "answer": {
+        "A": true,
+        "B": true,
+        "C": false,
+        "D": true
+      },
+      "passage": "Khoa học tự nhiên nghiên cứu các hiện tượng vật lý và hóa học. Nhiệt độ sôi của nước tinh khiết là 100°C tại áp suất 1 atm. Cây xanh sử dụng CO₂ và ánh sáng để tổng hợp glucose. Mặt trăng không tự phát sáng mà phản chiếu ánh sáng mặt trời. Tầng ozone hấp thụ phần lớn tia cực tím (UV) có hại từ mặt trời.",
+      "used": false
+    },
+    {
+      "id": "04ed0a76-7ba1-4c7c-b39f-be183481afde",
+      "type": "fact_analysis",
+      "difficulty": "hard",
+      "question": "Xác định đúng/sai cho các nhận định dưới đây:",
+      "choices": {
+        "A": "Python là ngôn ngữ lập trình thông dịch (interpreted)",
+        "B": "Java cần biên dịch ra mã máy trực tiếp như C++",
+        "C": "HTML là ngôn ngữ lập trình",
+        "D": "Git là hệ thống quản lý phiên bản"
+      },
+      "answer": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": true
+      },
+      "passage": "Trong phát triển phần mềm, có nhiều ngôn ngữ lập trình và công cụ khác nhau. Python là ngôn ngữ thông dịch, phổ biến trong khoa học dữ liệu và AI. Java biên dịch ra bytecode chạy trên JVM, không phải mã máy trực tiếp. HTML là ngôn ngữ đánh dấu (markup language), không phải ngôn ngữ lập trình. Git là hệ thống quản lý phiên bản phân tán rất phổ biến.",
+      "used": false
+    },
+    {
+      "id": "363e3081-92db-4d4b-a327-e460c5d1105a",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Trong thuật toán Quick Sort, trường hợp xấu nhất có độ phức tạp thời gian là?",
+      "choices": {
+        "A": "O(n log n)",
+        "B": "O(n²)",
+        "C": "O(n)",
+        "D": "O(log n)"
+      },
+      "answer": "B",
+      "passage": "",
+      "used": false
+    },
+    {
+      "id": "41a5f3f3-71ac-44c7-b8fc-67e846ae37c4",
+      "type": "multiple_choice",
+      "difficulty": "hard",
+      "question": "Nguyên lý nào khẳng định không thể xác định chính xác đồng thời vị trí và vận tốc của một hạt?",
+      "choices": {
+        "A": "Nguyên lý bảo toàn năng lượng",
+        "B": "Nguyên lý bất định Heisenberg",
+        "C": "Nguyên lý tương đối Einstein",
+        "D": "Nguyên lý Pauli"
+      },
+      "answer": "B",
+      "passage": "",
+      "used": false
+    }
+  ]
+}
