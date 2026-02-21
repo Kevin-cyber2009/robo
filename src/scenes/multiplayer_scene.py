@@ -603,7 +603,7 @@ class MultiplayerScene(BaseScene):
 
         # Winner announcement
         if self._winner=="draw":
-            wt="🤝 HÒA!"; wc=(255,220,80)
+            wt="HÒA!"; wc=(255,220,80)
         elif self._winner==1:
             wt="P1 CHIẾN THẮNG!"; wc=P1_COLOR
         else:

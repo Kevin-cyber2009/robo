@@ -1,5 +1,7 @@
 """
 ranking_scene.py - Màn hình Bảng Xếp Hạng
+============================================
+Hiển thị top 20 người chơi, sắp xếp theo điểm.
 """
 
 import pygame
@@ -80,7 +82,7 @@ class RankingScene(BaseScene):
 
     def _draw_table(self):
         """Vẽ bảng xếp hạng."""
-        headers = ["#", "Tên", "Điểm", "✓", "✗", "Ngày"]
+        headers = ["#", "Tên", "Điểm", "Đúng", "Sai", "Ngày"]
         col_x = [60, 120, 440, 580, 640, 720]
         col_w = [60, 320, 140, 60, 60, 200]
 
@@ -120,14 +122,9 @@ class RankingScene(BaseScene):
             pygame.draw.rect(row_surf, (*row_color, 180), row_surf.get_rect(), border_radius=6)
             self.screen.blit(row_surf, (40, row_y))
 
-            # Medal cho top 3
-            if rank <= 3:
-                medals = {1: "🥇", 2: "🥈", 3: "🥉"}
-                medal = assets.render_text(medals[rank], "sm", rank_color)
-                self.screen.blit(medal, (col_x[0], row_y + 12))
-            else:
-                rank_surf = assets.render_text(str(rank), "sm", rank_color)
-                self.screen.blit(rank_surf, (col_x[0], row_y + 12))
+            # Rank number (no medals, just numbers)
+            rank_surf = assets.render_text(str(rank), "sm", rank_color, bold=(rank <= 3))
+            self.screen.blit(rank_surf, (col_x[0], row_y + 12))
 
             # Tên
             # Highlight nếu là người chơi hiện tại
