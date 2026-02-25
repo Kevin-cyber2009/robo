@@ -6,7 +6,7 @@
   },
   "questions": [
     {
-      "id": "1e2d9cf6-b740-41f4-a401-33e2235cf897",
+      "id": "dac92bbe-6750-4453-b503-faff11172ff0",
       "type": "multiple_choice",
       "difficulty": "easy",
       "question": "Thủ đô của Việt Nam là?",
@@ -21,7 +21,7 @@
       "used": false
     },
     {
-      "id": "8a73b06b-0f60-495d-9126-b77717f7d3a5",
+      "id": "c26074cd-de5a-4ff4-bcc7-b45d90518bc2",
       "type": "multiple_choice",
       "difficulty": "medium",
       "question": "Quá trình quang hợp xảy ra ở bào quan nào?",
@@ -36,7 +36,7 @@
       "used": false
     },
     {
-      "id": "520e9c8a-384c-4833-8def-81073246724f",
+      "id": "fe79f1c5-8f12-4bc0-b128-28631c715a05",
       "type": "short_answer",
       "difficulty": "easy",
       "question": "7 × 8 = ?",
@@ -46,7 +46,7 @@
       "used": false
     },
     {
-      "id": "35563a75-ab54-4f6b-b75a-30724541eb5e",
+      "id": "4dc21136-cf82-4e1d-a051-111185c7531b",
       "type": "short_answer",
       "difficulty": "medium",
       "question": "Căn bậc hai của 144 là?",
@@ -56,7 +56,7 @@
       "used": false
     },
     {
-      "id": "88ba2f2d-7aa2-4f7d-98a3-f62d0c7bbed3",
+      "id": "8b2b2e6d-318d-467f-81fc-63ffc792272d",
       "type": "fact_analysis",
       "difficulty": "hard",
       "question": "Xác định đúng/sai cho các nhận định dưới đây:",
@@ -76,7 +76,7 @@
       "used": false
     },
     {
-      "id": "1ac12049-1dcf-4ad3-bc9b-12ed3267896b",
+      "id": "ab792b8d-2f77-4d27-adef-acba876c5344",
       "type": "multiple_choice",
       "difficulty": "hard",
       "question": "Nguyên lý bất định Heisenberg phát biểu rằng không thể xác định chính xác đồng thời điều gì?",

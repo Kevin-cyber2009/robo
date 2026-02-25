@@ -6,6 +6,8 @@ import pygame
 import os
 import json
 import shutil
+import tkinter as tk
+from tkinter import filedialog
 from src.scenes.base_scene import BaseScene
 from src.constants import *
 from src.assets import assets
@@ -70,18 +72,6 @@ class QuestionBankScene(BaseScene):
         self._status_msg = ""
         self._status_color = GREEN
         self._status_timer = 0.0
-
-        # Upload modal đơn giản (fake file browser bằng pygame)
-        self._upload_mode = False
-        self._upload_input = TextInput(
-            100, 300, SCREEN_W - 200, 48,
-            placeholder="Nhập đường dẫn file .docx (VD: C:/test.docx)"
-        )
-        self._btn_upload_confirm = Button(
-            SCREEN_W // 2 - 160, 380, 150, BUTTON_H, "Upload", font_size="sm")
-        self._btn_upload_cancel = Button(
-            SCREEN_W // 2 + 20, 380, 150, BUTTON_H, "Hủy",
-            color_normal=GRAY, bg_hover=GRAY_DARK, font_size="sm")
 
         self._load_classes()
 
@@ -232,11 +222,6 @@ class QuestionBankScene(BaseScene):
                 self._load_subjects()
             return
 
-        # Upload modal
-        if self._upload_mode:
-            self._update_upload_modal(dt, events)
-            return
-
         if self._step == self.STEP_CLASS:
             self._update_class(dt, events)
         elif self._step == self.STEP_SUBJECT:
@@ -286,28 +271,24 @@ class QuestionBankScene(BaseScene):
         self._btn_delete.update(events, dt)
 
         if self._btn_upload.clicked:
-            self._upload_mode = True
-            self._upload_input.clear()
-            self._upload_input.active = True
+            self._open_file_dialog()
 
         if self._btn_delete.clicked:
             self._do_delete()
 
-    def _update_upload_modal(self, dt, events):
-        self._upload_input.update(events, dt)
-        self._btn_upload_confirm.update(events, dt)
-        self._btn_upload_cancel.update(events, dt)
+    def _open_file_dialog(self):
+        """Mở cửa sổ chọn file .docx của hệ điều hành."""
+        root = tk.Tk()
+        root.withdraw()                   # Ẩn cửa sổ tkinter chính
+        root.attributes("-topmost", True) # Hiện trên cửa sổ pygame
+        file_path = filedialog.askopenfilename(
+            title="Chọn file .docx để upload",
+            filetypes=[("Word Document", "*.docx"), ("Tất cả file", "*.*")]
+        )
+        root.destroy()
 
-        for event in events:
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-                self._upload_mode = False
-
-        if self._btn_upload_cancel.clicked:
-            self._upload_mode = False
-
-        if self._btn_upload_confirm.clicked:
-            self._do_upload(self._upload_input.value)
-            self._upload_mode = False
+        if file_path:
+            self._do_upload(file_path)
 
     # ─── Draw ────────────────────────────────────────────────────
 
@@ -331,10 +312,6 @@ class QuestionBankScene(BaseScene):
             self._draw_status()
 
         self._btn_back.draw(self.screen)
-
-        # Upload modal overlay
-        if self._upload_mode:
-            self._draw_upload_modal()
 
     def _draw_folder_step(self):
         is_class = (self._step == self.STEP_CLASS)
@@ -386,29 +363,3 @@ class QuestionBankScene(BaseScene):
         txt = assets.render_text(self._status_msg, "sm", WHITE)
         surf.blit(txt, (10, (40 - txt.get_height()) // 2))
         self.screen.blit(surf, (60, SCREEN_H - 80))
-
-    def _draw_upload_modal(self):
-        # Overlay tối
-        overlay = pygame.Surface((SCREEN_W, SCREEN_H), pygame.SRCALPHA)
-        overlay.fill((0, 0, 0, 180))
-        self.screen.blit(overlay, (0, 0))
-
-        # Panel upload
-        panel = Panel(80, 220, SCREEN_W - 160, 240, alpha=250)
-        panel.draw(self.screen)
-
-        title = assets.render_text("📤 Upload file .docx", "lg", CYAN, bold=True)
-        self.screen.blit(title, (SCREEN_W // 2 - title.get_width() // 2, 240))
-
-        hint = assets.render_text(
-            "Nhập đường dẫn đầy đủ đến file .docx của bạn:",
-            "sm", GRAY
-        )
-        self.screen.blit(hint, (SCREEN_W // 2 - hint.get_width() // 2, 285))
-
-        self._upload_input.draw(self.screen)
-        self._btn_upload_confirm.draw(self.screen)
-        self._btn_upload_cancel.draw(self.screen)
-
-        esc_hint = assets.render_text("Nhấn ESC để đóng", "xs", GRAY)
-        self.screen.blit(esc_hint, (SCREEN_W // 2 - esc_hint.get_width() // 2, 440))
